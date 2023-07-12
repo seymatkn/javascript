@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isValid(frm){
+
+        
+   var email = frm.email.value ;
+   var atpos = email.indexOf("@");
+   var dotpos = email.lastIndexOf(".");
+   if(atpos<1 || dotpos< atpos+2  || dotpos+2>= email.length )
+    {
+        alert("Girdiginiz adres gecerli degil !!! \n Lutfen Gecerli Bir E-Posta Adresi Giriniz... ");
+         return false ;
+
+     }
+     else 
+     {
+        alert("Kayit Isleminiz Tamamlanmistir..");
+        return true ;
+        
+     }
+    }
+        function arkaplan(renk){
+            document.bgColor = renk 
+        }
+    </script>
+
+    <script src="email_adres_kontrol.js" type="text/javascript" lang="javascript"></script>
+    <form name="uye_formu" onsubmit="return isValid(this)" method="post" >
+    <label> E-Posta Adresi</label>
+    <input type="text" name="email">
+    <input type="submit" value="Kaydet">
+    </form>
+    <script type="text/javascript"  lang="javascript"  src="arkaplan_degistir.js"></script>
+    <form>
+        <input type="button" value="Aqua" onclick="arkaplan('aqua')">
+        <input type="button" value="Sarı" onclick="arkaplan('yellow')">
+        <input type="button" value="Beyaz" onclick="arkaplan('white')">
+        <input type="button" value="Gri" onclick="arkaplan('gray')">
+        <input type="button" value="Siyah" onclick="arkaplan('black')">
+        <input type="button" value="Kırmızı" onclick="arkaplan('red')">
+        <input type="button" value="Yeşil" onclick="arkaplan('green')">
+        <input type="button" value="Mavi" onclick="arkaplan('blue')">
+   </form>
+</body>
+</html>

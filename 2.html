@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function cevap ()
+{
+    if (document.getElementById("rad3").checked==true)
+    {
+        paragraf.innerHTML="DOGRU YANIT !! Tebrikler..." 
+    }
+    else {
+        paragraf.innerHTML="YANLIS !! Lutfen tekrar deneyiniz.."
+    }
+}
+
+    </script>
+
+    <script type="text/javascript"  lang="javascript"  src="test_sinavi.js" ></script>
+    <form name="Soru">
+    Istanbul hangi tarihte fethedilmistir? <br>
+    <label for="rad1">
+        <input type="radio" id="rad1" name="radyo"> 29 Haziran 1789
+    </label><br>
+    <label for="rad2">
+        <input type="radio" id="rad2" name="radyo"> 29 Ekim 1923
+    </label><br>
+    <label for="rad3">
+        <input type="radio" id="rad3" name="radyo"> 29 Mayis 1453
+    </label><br>
+    <label for="rad4">
+        <input type="radio" id="rad4" name="radyo"> 29 Nisan 1920
+    </label><br>
+    <label for="rad5">
+        <input type="radio" id="rad5" name="radyo"> 29 Agustos 1071
+    </label><br>
+    <input type="button" value="DEGERLENDIR" onclick="cevap()">
+    <p id="paragraf"> Soruyu yanitladiktan sonra lutfen yukarida ki dugmeye tiklayiniz.</p>
+
+
+    </form>
+    
+</body>
+</html>
